@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: prints different combinations of two digits
+ * Description: printsdifferent combinations of two digits
  * Return: always 0 (success)
  */
 int main(void)
@@ -11,19 +11,21 @@ int main(void)
 	int n;
 	int m;
 
-	for (n = 48; n < 57; n++)
+	for (n = 0; n < 9; n++)
 	{
-		for (m = n + 1; n < 58; m++)
+		for (m = n + 1; m < 10; m++)
 		{
-			putchar(n);
-			putchar(m);
-			if (n != 56 || m != 57)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+			putchar((n % 10) + '0');
+			putchar((m % 10) + '0');
+
+			if (n == 8 && m == 9)
+				continue;
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
