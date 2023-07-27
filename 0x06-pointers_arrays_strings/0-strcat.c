@@ -21,11 +21,9 @@ char *_strcat(char *dest, char *src)
 	{
 		*(dest + i) = *(src + j);
 		if (*(src + j) == '\0')
-		{
 			break;
-			i++;
-			j++;
-		}
+		i++;
+		j++;
 	}
 	return (dest);
 }
