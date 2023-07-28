@@ -1,4 +1,7 @@
 #include <stdio.h>
+/**
+ * main - writ eone new line
+ */
 
 int main(void)
 {
